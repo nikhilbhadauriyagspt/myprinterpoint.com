@@ -95,10 +95,10 @@ export default function Footer() {
             <div className="lg:col-span-4 space-y-10">
               <div className="space-y-6">
                 <Link to="/" className="block">
-                  <img src="/logo/logo.png" alt="victorprinter" className="h-10 md:h-12 object-contain" />
+                  <img src="/logo/logo.png" alt="Victorprinter" className="h-10 md:h-12 object-contain" />
                 </Link>
                 <p className="text-gray-500 font-medium leading-relaxed text-[15px]">
-                  Authorized HP partner specializing in high-performance printing ecosystems. From enterprise-grade laser systems to precision inkjet technology, we empower modern workspaces with original hardware and dedicated technical expertise.
+                  HP Authorized Partner specializing in high-performance printing ecosystems. From enterprise-grade laser systems to precision inkjet technology, we empower modern workspaces with original hardware and dedicated technical expertise.
                 </p>
               </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-[11px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Corporate Office</p>
-                    <p className="text-[14px] font-bold text-gray-800">1327 Eraste Landry Rd, Lafayette, LA 70506, USA</p>
+                    <p className="text-[14px] font-bold text-gray-800">3855 E Foothill Blvd, Pasadena, CA 91107, USA</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -118,7 +118,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-[11px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Affiliation</p>
-                    <p className="text-[14px] font-bold text-gray-800">Direct Subsidiary of Primefix Solutions Group</p>
+                    <p className="text-[14px] font-bold text-gray-800">A Subsidiary of PrimeFix Solutions LLC</p>
                   </div>
                 </div>
               </div>
@@ -186,9 +186,9 @@ export default function Footer() {
 
               <div className="pt-4">
                 <div className="p-5 bg-blue-50 border border-blue-100 rounded-2xl inline-flex items-center gap-4">
-                  <img src="/brands/hp.png" alt="HP Partner" className="h-8 w-auto object-contain" />
+                  <img src="/brands/hp.png" alt="HP" className="h-8 w-auto object-contain" />
                   <div className="h-8 w-px bg-blue-200"></div>
-                  <p className="text-[10px] font-black text-[#3b82f6] uppercase leading-tight tracking-widest">Official<br />HP Hardware Partner</p>
+                  <p className="text-[10px] font-black text-[#3b82f6] uppercase leading-tight tracking-widest">HP Authorized<br />Partner</p>
                 </div>
               </div>
             </div>
@@ -202,10 +202,8 @@ export default function Footer() {
         <div className="w-full mx-auto px-6 lg:px-16">
           <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-[11px] font-bold uppercase tracking-widest">
-              <span>© 2026 victorprinter Solutions Group. All Rights Reserved.</span>
-              <div className="hidden md:flex items-center gap-2 text-gray-600">
-                <Globe size={14} /> <span>Serving Nationwide</span>
-              </div>
+              <span>© 2026 Victorprinter . All Rights Reserved.</span>
+
             </div>
 
             <div className="flex flex-wrap justify-center items-center gap-8 text-[11px] font-black tracking-widest uppercase">

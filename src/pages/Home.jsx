@@ -68,8 +68,8 @@ export default function Home() {
     <div className="bg-[#F5F5F5] font-sans overflow-x-hidden text-slate-900">
       <SEO
         title="Authorized HP Partner | Premium Printers, Genuine Ink & Toner"
-        description="Shop authorized HP printers, genuine ink, toner, and premium tech accessories at victorprinter. Your trusted partner for high-performance printing solutions in Lafayette, LA and nationwide."
-        keywords="HP Authorized Partner, Buy HP Printers Online, Genuine HP Ink and Toner, HP LaserJet, HP OfficeJet, Printer Accessories, Business Printing Solutions, Lafayette Tech Store"
+        description="Shop authorized HP printers, genuine ink, toner, and premium tech accessories at victorprinter. Your trusted partner for high-performance printing solutions in Pasadena, CA and nationwide."
+        keywords="HP Authorized Partner, Buy HP Printers Online, Genuine HP Ink and Toner, HP LaserJet, HP OfficeJet, Printer Accessories, Business Printing Solutions, Pasadena Tech Store"
       />
       {/* 1. HERO */}
       <div className="relative">
@@ -86,6 +86,7 @@ export default function Home() {
       <FeaturedTabs
         printers={data.printers}
         accessories={data.accessories}
+        loading={data.loading}
       />
 
 
@@ -97,6 +98,7 @@ export default function Home() {
         newArrivals={data.all}
         topRated={data.all}
         popular={data.all}
+        loading={data.loading}
       />
 
 

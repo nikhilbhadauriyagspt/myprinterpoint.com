@@ -29,73 +29,102 @@ export default function CartDrawer() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full max-w-[450px] bg-[#FFFEF7] z-[1001] shadow-2xl flex flex-col font-urbanist border-l border-amber-100"
+            className="fixed top-0 right-0 h-full w-full max-w-[450px] bg-white z-[1001] shadow-2xl flex flex-col font-sans border-l border-gray-100"
           >
             {/* Header */}
-            <div className="p-8 border-b border-amber-50 flex items-center justify-between">
+            <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
               <div>
-                <h2 className="text-2xl font-bold text-[#4A3728] capitalize">Your Bag.</h2>
-                <p className="text-[10px] font-bold text-amber-600 capitalize tracking-widest mt-1">{cartCount} selected items</p>
+                <h2 className="text-xl font-extrabold text-black">Shopping Cart</h2>
+                <p className="text-[12px] font-semibold text-[#007DBA] mt-0.5">{cartCount} items selected</p>
               </div>
               <button
                 onClick={closeCartDrawer}
-                className="h-10 w-10 rounded-full bg-amber-50 flex items-center justify-center text-[#4A3728] hover:bg-amber-100 transition-all"
+                className="h-10 w-10 rounded-full hover:bg-white flex items-center justify-center text-gray-400 hover:text-black transition-all border border-transparent hover:border-gray-200"
               >
-                <X size={18} />
+                <X size={20} />
               </button>
             </div>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto p-6 custom-scrollbar bg-white">
               {cart.length > 0 ? (
-                <div className="space-y-8">
-                  {cart.map((item) => (
-                    <div key={item.id} className="flex gap-6 group">
-                      <div className="h-24 w-24 rounded-2xl bg-white p-4 flex items-center justify-center flex-shrink-0 relative border border-amber-50 shadow-sm">
-                        <img
-                          src={item.images ? `${(typeof item.images === 'string' ? JSON.parse(item.images)[0] : item.images[0])}` : ''}
-                          alt={item.name}
-                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform"
-                          onError={(e) => { e.target.src = "https://via.placeholder.com/100x100"; }}
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0 py-1">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="min-w-0">
-                            <p className="text-[9px] font-bold text-amber-500 capitalize tracking-widest mb-1">{item.brand_name}</p>
-                            <h3 className="text-sm font-bold text-[#4A3728] capitalize truncate pr-4">{item.name}</h3>
-                          </div>
-                          <button
-                            onClick={() => removeFromCart(item.id)}
-                            className="text-amber-200 hover:text-red-500 transition-colors"
-                          >
-                            <Trash2 size={14} />
-                          </button>
+                <div className="space-y-6">
+                  {cart.map((item) => {
+                    const getImagePath = (images) => {
+                      try {
+                        const imgs = typeof images === "string" ? JSON.parse(images) : images;
+                        const first = Array.isArray(imgs) && imgs.length ? imgs[0] : null;
+                        if (!first) return "https://via.placeholder.com/150";
+                        const cleaned = String(first).replaceAll("\\", "/");
+                        return cleaned.startsWith("/") ? cleaned : `/${cleaned}`;
+                      } catch {
+                        return "https://via.placeholder.com/150";
+                      }
+                    };
+                    
+                    return (
+                      <div key={item.id} className="flex gap-4 group pb-6 border-b border-gray-50 last:border-0">
+                        <div className="h-24 w-24 rounded-lg bg-gray-50 p-2 flex items-center justify-center flex-shrink-0 border border-gray-100">
+                          <img
+                            src={getImagePath(item.images)}
+                            alt={item.name}
+                            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                            onError={(e) => { e.target.src = "https://via.placeholder.com/100x100?text=No+Image"; }}
+                          />
                         </div>
-                        <div className="flex items-center justify-between mt-4">
-                          <div className="flex items-center gap-4 bg-amber-50 rounded-lg px-2 py-1 border border-amber-100/50">
-                            <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="text-amber-600 hover:text-amber-800"><Minus size={12} /></button>
-                            <span className="text-[11px] font-bold w-3 text-center text-[#4A3728]">{item.quantity}</span>
-                            <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="text-amber-600 hover:text-amber-800"><Plus size={12} /></button>
+                        <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+                          <div className="relative pr-8">
+                            <p className="text-[11px] font-bold text-[#007DBA] uppercase tracking-wider mb-1">{item.brand_name || 'Official Brand'}</p>
+                            <h3 className="text-[14px] font-bold text-black leading-tight line-clamp-2 mb-1">
+                              {item.name}
+                            </h3>
+                            <button
+                              onClick={() => removeFromCart(item.id)}
+                              className="absolute top-0 right-0 p-1 text-gray-300 hover:text-red-500 transition-colors"
+                              title="Remove item"
+                            >
+                              <Trash2 size={16} />
+                            </button>
                           </div>
-                          <span className="text-sm font-bold text-[#4A3728]">${item.price * item.quantity}</span>
+                          
+                          <div className="flex items-center justify-between mt-3">
+                            <div className="flex items-center gap-3 bg-gray-100 rounded-full px-3 py-1.5 border border-gray-200">
+                              <button 
+                                onClick={() => updateQuantity(item.id, item.quantity - 1)} 
+                                className="text-gray-500 hover:text-black transition-colors"
+                                disabled={item.quantity <= 1}
+                              >
+                                <Minus size={14} />
+                              </button>
+                              <span className="text-[13px] font-bold min-w-[20px] text-center text-black">{item.quantity}</span>
+                              <button 
+                                onClick={() => updateQuantity(item.id, item.quantity + 1)} 
+                                className="text-gray-500 hover:text-black transition-colors"
+                              >
+                                <Plus size={14} />
+                              </button>
+                            </div>
+                            <span className="text-[15px] font-bold text-black">
+                              ${(Number(item.price || 0) * item.quantity).toFixed(2)}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <div className="h-full flex flex-col items-center justify-center text-center">
-                  <div className="h-16 w-16 rounded-full bg-amber-50 flex items-center justify-center mb-6">
-                    <ShoppingBag size={24} className="text-amber-200" />
+                  <div className="h-20 w-20 rounded-full bg-gray-50 flex items-center justify-center mb-6">
+                    <ShoppingBag size={32} className="text-gray-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#4A3728] capitalize mb-2">Your bag is empty</h3>
-                  <p className="text-xs font-bold text-amber-300 capitalize tracking-widest mb-8">Discover our collection</p>
+                  <h3 className="text-xl font-bold text-black mb-2">Your cart is empty</h3>
+                  <p className="text-sm text-gray-500 max-w-[250px] mb-8">Looks like you haven't added anything to your cart yet.</p>
                   <button
                     onClick={closeCartDrawer}
-                    className="px-8 py-3 bg-[#4A3728] text-white text-[10px] font-bold capitalize tracking-widest rounded-xl hover:bg-amber-800 transition-all"
+                    className="px-8 py-3 bg-[#007DBA] text-white text-[13px] font-bold rounded-full hover:bg-[#005f8d] transition-all shadow-md"
                   >
-                    Explore Shop
+                    Start Shopping
                   </button>
                 </div>
               )}
@@ -103,30 +132,30 @@ export default function CartDrawer() {
 
             {/* Footer */}
             {cart.length > 0 && (
-              <div className="p-8 bg-[#FFFEF7] border-t border-amber-50">
-                <div className="flex items-center justify-between mb-8">
-                  <span className="text-[10px] font-bold text-amber-400 capitalize tracking-widest">Estimated Total</span>
-                  <span className="text-2xl font-bold text-[#4A3728]">${total}</span>
+              <div className="p-6 bg-gray-50 border-t border-gray-100">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-sm font-bold text-gray-500">Subtotal</span>
+                  <span className="text-2xl font-extrabold text-black">${total.toFixed(2)}</span>
                 </div>
                 <div className="flex flex-col gap-3">
                   <Link
                     to="/cart"
                     onClick={closeCartDrawer}
-                    className="w-full h-12 bg-amber-50 text-amber-900 rounded-xl flex items-center justify-center gap-2 text-[10px] font-bold capitalize tracking-widest hover:bg-amber-100 transition-all border border-amber-100"
+                    className="w-full h-12 bg-white text-black border border-gray-200 rounded-lg flex items-center justify-center font-bold text-[14px] hover:bg-gray-50 transition-all"
                   >
-                    Manage Cart
+                    View Shopping Cart
                   </Link>
                   <Link
                     to="/checkout"
                     onClick={closeCartDrawer}
-                    className="w-full h-12 bg-[#4A3728] text-white rounded-xl flex items-center justify-center gap-3 text-[10px] font-bold capitalize tracking-widest hover:bg-amber-800 transition-all shadow-lg"
+                    className="w-full h-12 bg-[#2f47ff] text-white rounded-lg flex items-center justify-center gap-3 font-bold text-[14px] hover:bg-[#1a32e0] transition-all shadow-lg"
                   >
-                    Continue to Checkout
-                    <ArrowRight size={14} />
+                    Proceed to Checkout
+                    <ArrowRight size={18} />
                   </Link>
                 </div>
-                <p className="text-center text-[8px] font-bold text-amber-300 capitalize tracking-widest mt-6">
-                  Taxes and shipping calculated at final step
+                <p className="text-center text-[11px] text-gray-400 mt-5">
+                  Taxes and shipping calculated at checkout
                 </p>
               </div>
             )}

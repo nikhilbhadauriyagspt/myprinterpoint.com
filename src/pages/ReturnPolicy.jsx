@@ -21,10 +21,9 @@ export default function ReturnPolicy() {
         <p className="font-medium text-gray-500 mb-4 italic">After receiving an RMA number, place the item securely in its original packaging and include your proof of purchase, then mail your return to the following address:</p>
         <address className="not-italic text-black font-bold leading-relaxed capitalize ">
           victorprinter LLC<br />
-          Attn: Returns<br />
-          RMA #<br />
-          1327 Eraste Landry Rd, <br />
-          Lafayette, LA 70506, USA<br />
+
+          3855 E Foothill Blvd, <br />
+          Pasadena, CA 91107, USA<br />
           United States
         </address>
         <p className="mt-6 text-[#007DBA] font-extrabold capitalize text-xs tracking-widest">

@@ -86,18 +86,11 @@ export default function Contact() {
                 <MapPin size={24} />
               </div>
               <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Office Location</h4>
-              <p className="text-lg font-extrabold text-black">Lafayette, LA</p>
-              <p className="text-[12px] font-semibold text-gray-400 mt-2">1327 Eraste Landry Rd, 70506, USA</p>
+              <p className="text-lg font-extrabold text-black">Pasadena, CA</p>
+              <p className="text-[12px] font-semibold text-gray-400 mt-2">3855 E Foothill Blvd, 91107, USA</p>
             </div>
 
-            <div className="p-10 bg-black text-white relative overflow-hidden rounded-sm group shadow-2xl">
-              <div className="relative z-10 space-y-4">
-                <img src="/brands/hp.png" alt="HP" className="h-12 w-auto object-contain mb-2 invert brightness-0" />
-                <h4 className="text-xl font-extrabold">Certified Partner Support</h4>
-                <p className="text-sm font-medium text-gray-400 leading-relaxed">Our technicians are factory-trained to provide the most accurate hardware consultation.</p>
-              </div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#007DBA]/10 blur-3xl rounded-full" />
-            </div>
+
           </div>
 
           {/* Contact Form Stage */}

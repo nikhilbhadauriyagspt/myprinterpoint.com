@@ -18,7 +18,23 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export default function FeaturedTabs({ printers = [], accessories = [] }) {
+const SkeletonProduct = () => (
+  <div className="border-l border-[#e9e9e9] p-5 flex flex-col bg-white h-[480px] animate-pulse">
+    <div className="w-full aspect-square bg-gray-200 rounded-sm mb-4"></div>
+    <div className="flex justify-between mb-4">
+      <div className="h-4 w-16 bg-gray-200 rounded"></div>
+      <div className="h-4 w-20 bg-gray-200 rounded"></div>
+    </div>
+    <div className="h-4 w-full bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 w-3/4 bg-gray-200 rounded mb-4"></div>
+    <div className="mt-auto flex gap-2">
+      <div className="h-10 flex-1 bg-gray-200 rounded"></div>
+      <div className="h-10 w-10 bg-gray-200 rounded"></div>
+    </div>
+  </div>
+);
+
+export default function FeaturedTabs({ printers = [], accessories = [], loading = false }) {
   const [activeTab, setActiveTab] = useState("printers");
   const { addToCart, toggleWishlist, isInWishlist } = useCart();
 
@@ -121,9 +137,16 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
             }}
             className="featured-swiper !pb-24"
           >
-            {activeData.map((p) => (
-              <SwiperSlide key={p.id}>
-                <div className="group relative border-l border-[#e9e9e9] p-5 flex flex-col bg-white h-[480px]  hover:z-50 ">
+            {loading ? (
+              [...Array(5)].map((_, i) => (
+                <SwiperSlide key={`skeleton-${i}`}>
+                  <SkeletonProduct />
+                </SwiperSlide>
+              ))
+            ) : (
+              activeData.map((p) => (
+                <SwiperSlide key={p.id}>
+                  <div className="group relative border-l border-[#e9e9e9] p-5 flex flex-col bg-white h-[480px]  hover:z-50 ">
                   {/* Heart */}
                   <button
                     onClick={() => toggleWishlist(p)}
@@ -190,7 +213,7 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
+            )))}
           </Swiper>
         </div>
       </div>

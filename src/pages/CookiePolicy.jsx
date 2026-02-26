@@ -142,10 +142,10 @@ export default function CookiePolicy() {
       <p>If you have any questions regarding this Cookie Policy, please contact:</p>
       <div className="bg-gray-50 p-8 rounded-sm border border-[#e9e9e9] my-8 not-prose">
         <address className="not-italic text-gray-700 font-bold leading-relaxed space-y-2">
-          <p className="text-black font-extrabold">victorprinter LLC</p>
-          <p>Authorised HP Partner</p>
-          <p>1327 Eraste Landry Rd</p>
-          <p>Lafayette, LA 70506</p>
+          <p className="text-black font-extrabold">Victorprinter LLC</p>
+          <p>HP Authorized Partner</p>
+          <p>3855 E Foothill Blvd</p>
+          <p>Pasadena, CA 91107</p>
           <p>United States</p>
           <p className="pt-4 flex items-center gap-3 text-[#007DBA] font-extrabold">info@victorprinter.shop</p>
         </address>

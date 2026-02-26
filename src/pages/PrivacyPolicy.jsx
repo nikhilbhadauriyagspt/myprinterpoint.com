@@ -9,11 +9,11 @@ export default function PrivacyPolicy() {
       lastUpdated="February 11, 2026"
     >
       <p className="lead">
-        This Privacy Notice for victorprinter LLC ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:
+        This Privacy Notice for Victorprinter LLC ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services"), including when you:
       </p>
       <ul>
         <li>Visit our website at <a href="http://victorprinter.shop/">http://victorprinter.shop/</a> or any website of ours that links to this Privacy Notice</li>
-        <li>Use Printers, Consumables & Accessories. victorprinter Solutions is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.</li>
+        <li>Use Printers, Consumables & Accessories. Victorprinter Solutions is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.</li>
         <li>Engage with us in other related ways, including any marketing or events</li>
       </ul>
       <p>
@@ -285,10 +285,10 @@ export default function PrivacyPolicy() {
       <p>If you have questions or comments about this notice, you may email us at <a href="mailto:info@victorprinter.shop">info@victorprinter.shop</a> or contact us by post at:</p>
       <div className="bg-gray-50 p-8 rounded-sm border border-[#e9e9e9] my-8 not-prose">
         <address className="not-italic text-gray-700 font-bold leading-relaxed">
-          victorprinter LLC<br />
-          Authorised HP Partner<br />
-          1327 Eraste Landry Rd, <br />
-          Lafayette, LA 70506, USA<br />
+          Victorprinter LLC<br />
+          HP Authorized Partner<br />
+          3855 E Foothill Blvd, <br />
+          Pasadena, CA 91107, USA<br />
           United States
         </address>
       </div>

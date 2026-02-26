@@ -4,7 +4,24 @@ import { ChevronLeft, ChevronRight, ShoppingCart, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "../context/CartContext";
 
-const SpotlightBlock = ({ title, data, colIndex }) => {
+const SkeletonSpotlightItem = () => (
+  <div className="block py-7 border-b border-[#ededed] animate-pulse">
+    <div className="flex items-center gap-5">
+      <div className="w-[70px] h-[55px] bg-gray-200 rounded shrink-0"></div>
+      <div className="min-w-0 flex-1">
+        <div className="h-4 w-16 bg-gray-200 rounded mb-2"></div>
+        <div className="h-4 w-full bg-gray-200 rounded mb-3"></div>
+        <div className="flex items-center gap-3">
+          <div className="h-3 w-20 bg-gray-200 rounded"></div>
+          <div className="w-px h-3 bg-gray-200"></div>
+          <div className="h-3 w-10 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const SpotlightBlock = ({ title, data, colIndex, loading = false }) => {
   const perPage = 3;
   const [page, setPage] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -89,7 +106,9 @@ const SpotlightBlock = ({ title, data, colIndex }) => {
               opacity: { duration: 0.2 }
             }}
           >
-            {pageItems.length ? (
+            {loading ? (
+              [...Array(3)].map((_, i) => <SkeletonSpotlightItem key={`skel-${i}`} />)
+            ) : pageItems.length ? (
               pageItems.map((p) => (
                 <div
                   key={p.id}
@@ -148,6 +167,7 @@ export default function TripleSpotlightSection({
   newArrivals = [],
   topRated = [],
   popular = [],
+  loading = false
 }) {
   const normalizeList = (input) => {
     if (Array.isArray(input)) return input;
@@ -159,9 +179,9 @@ export default function TripleSpotlightSection({
     <section className=" font-sans py-12 md:py-20 border-t border-gray-100">
       <div className="w-full mx-auto px-4 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 border border-[#ededed]">
-          <SpotlightBlock title="New Arrivals" data={normalizeList(newArrivals)} colIndex={0} />
-          <SpotlightBlock title="Top Rated" data={normalizeList(topRated)} colIndex={1} />
-          <SpotlightBlock title="Popular Products" data={normalizeList(popular)} colIndex={2} />
+          <SpotlightBlock title="New Arrivals" data={normalizeList(newArrivals)} colIndex={0} loading={loading} />
+          <SpotlightBlock title="Top Rated" data={normalizeList(topRated)} colIndex={1} loading={loading} />
+          <SpotlightBlock title="Popular Products" data={normalizeList(popular)} colIndex={2} loading={loading} />
         </div>
       </div>
     </section>

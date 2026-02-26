@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import { ShieldCheck, Zap, Heart, Globe, Award, Printer, Package, Wrench, Leaf, ChevronRight, CheckCircle2, Headphones, Sparkles, Target, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import banner1 from "@/assets/bannerr/banner1.jpg";
+import banner1 from "@/assets/bannerr/about.png";
 
 export default function About() {
   return (
@@ -27,7 +27,7 @@ export default function About() {
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-[#007DBA] rounded-sm border border-[#007DBA]/10">
             <CheckCircle2 size={16} />
-            <span className="text-[11px] font-bold">Official HP Partner</span>
+            <span className="text-[11px] font-bold">HP Authorized Partner</span>
           </div>
         </div>
       </div>
@@ -42,18 +42,8 @@ export default function About() {
               <div className="w-12 h-1 bg-[#ffc122]" />
             </div>
             <p className="text-gray-500 text-lg font-medium leading-relaxed">
-              Founded in 2026, victorprinter was established to solve a singular challenge: making the acquisition of high-performance printing infrastructure simple, transparent, and absolutely authentic. As a new generation authorized partner, we bridge the gap between complex industrial technology and a seamless, personalized experience.
+              Founded in 2026, Victorprinter was established to solve a singular challenge: making the acquisition of high-performance printing infrastructure simple, transparent, and absolutely authentic. As a new generation authorized partner, we bridge the gap between complex industrial technology and a seamless, personalized experience.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 border-t border-gray-50">
-              <div className="space-y-1">
-                <h4 className="text-3xl font-extrabold text-black">100%</h4>
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Genuine HP Inventory</p>
-              </div>
-              <div className="space-y-1">
-                <h4 className="text-3xl font-extrabold text-black">24/7</h4>
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Certified Technical Support</p>
-              </div>
-            </div>
           </div>
           <div className="lg:col-span-5">
             <div className="relative aspect-square rounded-sm overflow-hidden border border-[#e9e9e9] group">
@@ -125,7 +115,7 @@ export default function About() {
         <div className="bg-white p-10 md:p-16 border border-[#e9e9e9] rounded-sm">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-black">The victorprinter Advantage</h2>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-black">The Victorprinter Advantage</h2>
               <p className="text-gray-400 text-sm font-semibold">Certified hardware ecosystem benefits</p>
             </div>
             <Link to="/shop" className="text-xs font-bold text-[#007DBA] hover:underline flex items-center gap-2">

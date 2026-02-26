@@ -11,19 +11,19 @@ export default function TermsAndConditions() {
       <section>
         <h2>Agreement To Our Legal Terms</h2>
         <p>
-          We are victorprinter LLC ("Company," "we," "us," "our"), a company registered in Louisiana, United States at 1327 Eraste Landry Rd, Lafayette, LA 70506.
+          We are Victorprinter LLC ("Company," "we," "us," "our"), a company registered in California, United States at 3855 E Foothill Blvd, Pasadena, CA 91107.
         </p>
         <p>
           We operate the website <a href="http://victorprinter.shop/">http://victorprinter.shop/</a> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
         </p>
         <p>
-          victorprinter Solutions is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.
+          Victorprinter Solutions is your trusted destination for authentic, high-performance printers and printing accessories from HP and other leading technology brands.
         </p>
         <p>
-          You can contact us by email at <a href="mailto:info@victorprinter.shop">info@victorprinter.shop</a>, or by mail to 1327 Eraste Landry Rd, Lafayette, LA 70506, United States.
+          You can contact us by email at <a href="mailto:info@victorprinter.shop">info@victorprinter.shop</a>, or by mail to 3855 E Foothill Blvd, Pasadena, CA 91107, United States.
         </p>
         <p>
-          These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and victorprinter LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
+          These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Victorprinter LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. <strong>IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</strong>
         </p>
         <p>
           Supplemental terms and conditions or documents that may be posted on the Services from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these Legal Terms at any time and for any reason. We will alert you about any changes by updating the "Last updated" date of these Legal Terms, and you waive any right to receive specific notice of each such change. It is your responsibility to periodically review these Legal Terms to stay informed of updates. You will be subject to, and will be deemed to have been made aware of and to have accepted, the changes in any revised Legal Terms by your continued use of the Services after the date such revised Legal Terms are posted.
@@ -368,10 +368,9 @@ export default function TermsAndConditions() {
         </p>
         <div className="bg-gray-50 p-8 rounded-sm border border-[#e9e9e9] my-8 not-prose">
           <address className="not-italic text-gray-700 font-bold leading-relaxed space-y-2 capitalize ">
-            <p className="text-black font-extrabold">victorprinter LLC</p>
-            <p>Authorised HP Partner</p>
-            <p>3140 Polaris Ave Ste 1</p>
-            <p>1327 Eraste Landry Rd, Lafayette, LA 70506, USA</p>
+            <p className="text-black font-extrabold">Victorprinter LLC</p>
+            <p>HP Authorized Partner</p>
+            <p>3855 E Foothill Blvd, Pasadena, CA 91107, USA</p>
             <p>United States</p>
             <p className="pt-4 text-[#007DBA] font-extrabold lowercase">Email: info@victorprinter.shop</p>
           </address>

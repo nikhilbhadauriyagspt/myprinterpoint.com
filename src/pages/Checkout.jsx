@@ -87,13 +87,13 @@ export default function Checkout() {
     try {
       const orderData = {
         ...formData,
-        address: `${formData.address} (via victorprinter.shop)`,
+        address: `${formData.address} (via Victorprinter.shop)`,
         user_id: user?.id,
         total: finalTotal,
         items: cart,
         payment_details: paymentDetails,
-        source: 'victorprinter.shop',
-        notes: `Order from victorprinter.shop | ${formData.notes || ''}`
+        source: 'Victorprinter.shop',
+        notes: `Order from Victorprinter.shop | ${formData.notes || ''}`
       };
 
       const response = await fetch(`${API_BASE_URL}/orders`, {

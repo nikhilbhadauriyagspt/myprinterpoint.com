@@ -108,7 +108,7 @@ export default function Header() {
         <div className="w-full mx-auto px-16 flex justify-between items-center text-[12px] font-[500] text-[#555555]">
           <div>
             Hi! Welcome to{' '}
-            <span className="font-semibold text-gray-800">victorprinter</span>{' '}
+            <span className="font-semibold text-gray-800">Victorprinter</span>{' '}
             online store.
           </div>
 
@@ -138,7 +138,7 @@ export default function Header() {
           <Link to="/" className="flex-shrink-0">
             <img
               src="/logo/logo.png"
-              alt="victorprinter"
+              alt="Victorprinter"
               className="h-9 md:h-11 object-contain"
             />
           </Link>
