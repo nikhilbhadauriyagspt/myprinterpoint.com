@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Manrope", sans-serif;
+  font-family: var(--font-sans);
+}
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-urbanist: "Manrope", sans-serif;
+  --font-snpro: "Manrope", sans-serif;
+  --color-brand: #D97706;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
