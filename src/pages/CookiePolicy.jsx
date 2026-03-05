@@ -10,7 +10,7 @@ export default function CookiePolicy() {
       lastUpdated="February 11, 2026"
     >
       <p className="lead">
-        This Cookie Policy explains how victorprinter LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://victorprinter.shop/">https://victorprinter.shop/</a>
+        This Cookie Policy explains how My Printer Point LLC ("Company," "we," "us," or "our") uses cookies and similar technologies when you visit our website: <a href="https://myprinterpoint.com/">https://myprinterpoint.com/</a>
       </p>
       <p>
         This Cookie Policy should be read together with our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms and Conditions</Link>.
@@ -127,8 +127,8 @@ export default function CookiePolicy() {
       <h2>8. Sale Or Sharing Of Personal Information</h2>
       <p>We do not sell personal information. If cookies are considered “sharing” under certain US state privacy laws (such as targeted advertising), you may exercise your rights by:</p>
       <ul>
-        <li>Emailing: <a href="mailto:info@victorprinter.shop">info@victorprinter.shop</a></li>
-        <li>Visiting: <Link to="/contact">https://victorprinter.shop/contact</Link></li>
+        <li>Emailing: <a href="mailto:info@myprinterpoint.com">info@myprinterpoint.com</a></li>
+        <li>Visiting: <Link to="/contact">https://myprinterpoint.com/contact</Link></li>
       </ul>
 
       <h2>9. Children’s Privacy</h2>
@@ -142,12 +142,12 @@ export default function CookiePolicy() {
       <p>If you have any questions regarding this Cookie Policy, please contact:</p>
       <div className="bg-gray-50 p-8 rounded-sm border border-[#e9e9e9] my-8 not-prose">
         <address className="not-italic text-gray-700 font-bold leading-relaxed space-y-2">
-          <p className="text-black font-extrabold">Victorprinter LLC</p>
+          <p className="text-black font-extrabold">My Printer Point LLC</p>
           <p>HP Authorized Partner</p>
-          <p>3855 E Foothill Blvd</p>
+          <p>3883 EFoothill Blvd</p>
           <p>Pasadena, CA 91107</p>
           <p>United States</p>
-          <p className="pt-4 flex items-center gap-3 text-[#007DBA] font-extrabold">info@victorprinter.shop</p>
+          <p className="pt-4 flex items-center gap-3 text-[#007DBA] font-extrabold">info@myprinterpoint.com</p>
         </address>
       </div>
     </PolicyLayout>

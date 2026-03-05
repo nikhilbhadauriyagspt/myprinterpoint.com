@@ -39,7 +39,7 @@ import UserManager from './pages/admin/UserManager';
 
 // Layout wrapper for customer-facing pages
 const ShopLayout = ({ children }) => (
-  <div className="bg-[#F5F5F5] min-h-screen flex flex-col">
+  <div className="bg-[#f8fafc] min-h-screen flex flex-col">
     <Header />
     <main className="flex-grow pt-[72px] md:pt-[120px] lg:pt-[180px]">
       {children}

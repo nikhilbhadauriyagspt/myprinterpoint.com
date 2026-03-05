@@ -16,7 +16,7 @@ export default function QuickPicks({ products = [] }) {
       const imgs = typeof images === 'string' ? JSON.parse(images) : images;
       if (Array.isArray(imgs) && imgs.length > 0) return `/${imgs[0]}`;
     } catch (e) { }
-    return "https://via.placeholder.com/400x400?text=victorprinter";
+    return "https://via.placeholder.com/400x400?text=My Printer Point";
   };
 
   return (

@@ -45,7 +45,7 @@ export default function Contact() {
     <div className="bg-[#F5F5F5] min-h-screen font-sans text-slate-900 pb-20">
       <SEO
         title="Contact Us | Expert Technical Support"
-        description="Connect with the victorprinter team for technical support, bulk orders, or authorized hardware inquiries."
+        description="Connect with the My Printer Point team for technical support, bulk orders, or authorized hardware inquiries."
       />
 
       {/* --- Breadcrumbs Header --- */}
@@ -77,7 +77,7 @@ export default function Contact() {
                 <Mail size={24} />
               </div>
               <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Email Support</h4>
-              <p className="text-lg font-extrabold text-black">info@victorprinter.shop</p>
+              <p className="text-lg font-extrabold text-black">info@myprinterpoint.com</p>
               <p className="text-[12px] font-semibold text-gray-400 mt-2">Expect a response within 24 hours.</p>
             </div>
 
@@ -87,7 +87,7 @@ export default function Contact() {
               </div>
               <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-3">Office Location</h4>
               <p className="text-lg font-extrabold text-black">Pasadena, CA</p>
-              <p className="text-[12px] font-semibold text-gray-400 mt-2">3855 E Foothill Blvd, 91107, USA</p>
+              <p className="text-[12px] font-semibold text-gray-400 mt-2">3883 EFoothill Blvd, 91107, USA</p>
             </div>
 
 

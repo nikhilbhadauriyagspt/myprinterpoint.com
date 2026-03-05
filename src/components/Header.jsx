@@ -100,50 +100,45 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 z-[150] bg-white font-sans transition-all duration-300 ${scrolled ? 'shadow-md' : 'shadow-sm'
+      className={`w-full fixed top-0 left-0 z-[150] transition-all duration-500 ${scrolled ? 'glass-header py-1 shadow-lg shadow-blue-500/5' : 'bg-white shadow-sm py-0'
         }`}
     >
-      {/* TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#f5f5f5] border-b border-gray-100 py-3 hidden md:block">
-        <div className="w-full mx-auto px-16 flex justify-between items-center text-[12px] font-[500] text-[#555555]">
-          <div>
-            Hi! Welcome to{' '}
-            <span className="font-semibold text-gray-800">Victorprinter</span>{' '}
-            online store.
+      <style>{`
+        .glass-header {
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+      `}</style>
+      {/* TOP ANNOUNCEMENT BAR - Now in Dark Navy */}
+      <div className="bg-[#0f172a] py-2.5 hidden md:block">
+        <div className="w-full mx-auto px-16 flex justify-between items-center text-[11px] font-bold tracking-wider text-slate-300">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            MYPRINTERPOINT - AUTHORIZED HP PARTNER
           </div>
 
-          <div className="flex items-center text-[14px] gap-4">
-            <Link to="/shop" className="hover:text-[#3b82f6] transition-colors">
-              Catalogue
-            </Link>
-            <span className="text-gray-300 text-[10px]">|</span>
-            <Link to="/faq" className="hover:text-[#3b82f6] transition-colors">
-              FAQ
-            </Link>
-            <span className="text-gray-300 text-[10px]">|</span>
-            <Link
-              to="/contact"
-              className="hover:text-[#3b82f6] transition-colors"
-            >
-              Contact Us
-            </Link>
+          <div className="flex items-center gap-6 uppercase">
+            <Link to="/shop" className="hover:text-white transition-colors">Catalog</Link>
+            <Link to="/faq" className="hover:text-white transition-colors">Support</Link>
+            <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </div>
       </div>
 
       {/* MAIN HEADER SECTION */}
-      <div className="w-full mx-auto px-16 py-3 md:py-4 flex items-center justify-between gap-4 md:gap-10">
+      <div className="w-full mx-auto px-16 py-4 flex items-center justify-between gap-10">
         {/* Left: Logo & Category Toggle */}
-        <div className="flex items-center gap-30">
-          <Link to="/" className="flex-shrink-0">
+        <div className="flex items-center gap-12">
+          <Link to="/" className="flex-shrink-0 group">
             <img
               src="/logo/logo.png"
-              alt="Victorprinter"
-              className="h-9 md:h-11 object-contain"
+              alt="My Printer Point"
+              className="h-10 md:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
-          {/* Autozpro-style: icon + label, dropdown opens under this */}
           <div
             ref={catWrapRef}
             className="hidden lg:block relative"
@@ -153,41 +148,13 @@ export default function Header() {
             <button
               ref={catBtnRef}
               type="button"
-              className="flex items-center gap-2.5 cursor-pointer group select-none py-2"
+              className="flex items-center gap-3 cursor-pointer group select-none py-2.5 px-6 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"
             >
-              {/* minimal 3-line menu icon (blue) */}
-              <span className="inline-flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="18"
-                  viewBox="0 0 16 12"
-                  fill="none"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1Z"
-                    fill="#3b82f6"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 6C0 5.44772 0.447715 5 1 5H11C11.5523 5 12 5.44772 12 6C12 6.55228 11.5523 7 11 7H1C0.447715 7 0 6.55228 0 6Z"
-                    fill="#3b82f6"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M0 11C0 10.4477 0.447715 10 1 10H7C7.55228 10 8 10.4477 8 11C8 11.5523 7.55228 12 7 12H1C0.447715 12 0 11.5523 0 11Z"
-                    fill="#3b82f6"
-                  />
-                </svg>
-              </span>
-
-              <span className="text-[14px] font-bold text-gray-800 ">
+              <Menu size={18} />
+              <span className="text-[13px] font-bold tracking-wide">
                 Shop By Category
               </span>
+              <ChevronDown size={14} className={`transition-transform duration-300 ${isCategoryOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Dropdown directly under the button (Vertical Style) */}

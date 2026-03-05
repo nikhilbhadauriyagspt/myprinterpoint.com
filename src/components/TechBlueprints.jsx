@@ -2,183 +2,117 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 /**
- * Promotions collage (same layout as screenshot):
- * - Left: 1 big banner
- * - Right: top wide banner + bottom two small banners
- *
- * ✅ You will upload images and just replace the image paths below.
- * ✅ Text + buttons are in code (not on images).
+ * Promotions collage:
+ * - Redesigned to show only two high-impact banners in a 2-column grid.
  */
 export default function SpecialsPromotions() {
   // 🔁 Replace these with your uploaded image paths
   const IMG = {
     left: "/banner/promo-left.jpg",
-    topRight: "/banner/promo-top-right.jpg",
-    bottomLeft: "/banner/promo-bottom-left.jpg",
-    bottomRight: "/banner/promo-bottom-right.jpg",
+    right: "/banner/promo-top-right.jpg",
   };
 
   return (
-    <section className=" font-sans py-6  md:py-0">
+    <section className="font-sans py-20 bg-white">
       <div className="w-full mx-auto px-4 lg:px-16">
-        <h2 className="text-[28px] md:text-[32px] font-extrabold text-black mb-6">
-          Specials & Promotions
-        </h2>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-10 h-[2px] bg-blue-600"></span>
+              <span className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.4em]">Limited Time</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+              Specials & <span className="text-slate-400 italic font-light">Promotions.</span>
+            </h2>
+          </div>
+          <Link to="/shop" className="text-blue-600 font-bold text-sm hover:underline uppercase tracking-widest flex items-center gap-2">
+            View All Offers <ArrowRight size={16} />
+          </Link>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* LEFT BIG */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* BANNER 1 */}
           <PromoCard
-            className="lg:col-span-5 min-h-[340px] md:min-h-[420px]"
+            className="min-h-[400px] md:min-h-[500px]"
             image={IMG.left}
             overlay="strong"
           >
-            <p className="text-white/90 text-[12px] font-bold uppercase tracking-widest">
-              Office Printing
-            </p>
+            <span className="inline-block px-4 py-1 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white text-[10px] font-bold uppercase tracking-widest mb-6">
+              Season Sale
+            </span>
 
-            <h3 className="mt-3 text-white text-[34px] md:text-[44px] font-extrabold leading-[1.02]">
-              CLEARANCE
+            <h3 className="text-white text-4xl md:text-6xl font-black leading-tight mb-4">
+              CLEARANCE <br/>
+              <span className="text-blue-400 italic">EVENT.</span>
             </h3>
 
-            <p className="mt-2 text-[#FFC122] text-[26px] md:text-[34px] font-extrabold leading-none">
-              UP TO 60% OFF
+            <p className="text-white/80 text-lg max-w-sm mb-10 leading-relaxed font-medium">
+              Up to <span className="text-white font-bold text-2xl">60% OFF</span> on select premium HP printers and authentic supplies.
             </p>
 
-            <p className="mt-4 text-white/90 text-[13px] md:text-[14px] max-w-[320px] leading-relaxed">
-              Free shipping on select printers & supplies
-            </p>
-
-            <div className="mt-6">
-              <Link
-                to="/shop"
-                className="inline-flex items-center gap-2 bg-[#FFC122] hover:bg-[#ffb300] text-black text-[12px] font-bold px-6 py-3 transition-all"
-                style={{ borderRadius: 0 }}
-              >
-                SHOP NOW <ArrowRight size={16} />
-              </Link>
-            </div>
+            <Link
+              to="/shop"
+              className="inline-flex items-center gap-3 bg-white text-slate-950 px-8 py-4 rounded-2xl font-bold transition-all hover:bg-blue-600 hover:text-white hover:shadow-2xl hover:shadow-blue-500/40 group/btn"
+            >
+              Shop the Sale
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </PromoCard>
 
-          {/* RIGHT SIDE */}
-          <div className="lg:col-span-7 grid grid-cols-1 gap-6">
-            {/* TOP WIDE */}
-            <PromoCard
-              className="min-h-[200px] md:min-h-[220px]"
-              image={IMG.topRight}
-              overlay="soft"
-              align="left"
+          {/* BANNER 2 */}
+          <PromoCard
+            className="min-h-[400px] md:min-h-[500px]"
+            image={IMG.right}
+            overlay="soft"
+          >
+            <span className="inline-block px-4 py-1 bg-blue-600/20 backdrop-blur-md border border-blue-600/30 rounded-full text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">
+              Exclusive Access
+            </span>
+
+            <h3 className="text-white text-4xl md:text-6xl font-black leading-tight mb-4">
+              BUSINESS <br/>
+              <span className="text-[#ffc122] italic text-5xl">SOLUTIONS.</span>
+            </h3>
+
+            <p className="text-white/80 text-lg max-w-sm mb-10 leading-relaxed font-medium">
+              Empower your workspace with high-performance <span className="text-[#ffc122] font-bold">LaserJet systems</span>.
+            </p>
+
+            <Link
+              to="/shop?category=laser-printers"
+              className="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold transition-all hover:bg-[#ffc122] hover:text-slate-950 hover:shadow-2xl hover:shadow-amber-500/40 group/btn"
             >
-              <p className="text-red-400 text-[12px] font-extrabold uppercase tracking-widest">
-                SAVE UP TO $150
-              </p>
-
-              <p className="mt-2 text-white/90 text-[12px] font-bold uppercase tracking-widest">
-                Business Essentials
-              </p>
-
-              <h3 className="mt-3 text-white text-[28px] md:text-[36px] font-extrabold leading-[1.05]">
-                LASER PRINTERS
-              </h3>
-
-              <Link
-                to="/shop?category=laser-printers"
-                className="mt-5 inline-flex items-center gap-2 text-white text-[13px] font-semibold hover:text-[#FFC122] transition-colors"
-              >
-                Shop Now <ArrowRight size={14} />
-              </Link>
-            </PromoCard>
-
-            {/* BOTTOM TWO */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* BOTTOM LEFT */}
-              <PromoCard
-                className="min-h-[200px] md:min-h-[220px]"
-                image={IMG.bottomLeft}
-                overlay="soft"
-              >
-                <h3 className="text-white text-[26px] md:text-[30px] font-extrabold leading-[1.05]">
-                  INK TANK
-                  <br />
-                  INNOVATION
-                </h3>
-
-                <p className="mt-3 text-[#FFC122] text-[13px] font-bold uppercase tracking-widest">
-                  2 YEARS WARRANTY
-                </p>
-
-                <Link
-                  to="/shop?category=supertank-printers"
-                  className="mt-5 inline-flex items-center gap-2 text-white text-[13px] font-semibold hover:text-[#FFC122] transition-colors"
-                >
-                  Shop Now <ArrowRight size={14} />
-                </Link>
-              </PromoCard>
-
-              {/* BOTTOM RIGHT */}
-              <PromoCard
-                className="min-h-[200px] md:min-h-[220px]"
-                image={IMG.bottomRight}
-                overlay="strong"
-              >
-                <h3 className="text-white text-[26px] md:text-[30px] font-extrabold leading-[1.05]">
-                  <span className="text-[#FFC122]">GENUINE</span>
-                  <br />
-                  INK & TONER
-                </h3>
-
-                <p className="mt-2 text-white/90 text-[13px] font-bold uppercase tracking-widest">
-                  YOU NEED
-                </p>
-
-                <Link
-                  to="/shop?category=printer-accessories"
-                  className="mt-5 inline-flex items-center gap-2 text-white text-[13px] font-semibold hover:text-[#FFC122] transition-colors"
-                >
-                  Shop Now <ArrowRight size={14} />
-                </Link>
-              </PromoCard>
-            </div>
-          </div>
+              Explore Business Tech
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </PromoCard>
         </div>
       </div>
     </section>
   );
 }
 
-/**
- * PromoCard helper
- * overlay:
- *  - "strong": deeper dark overlay for big text
- *  - "soft": lighter overlay
- * align:
- *  - "left" default
- *  - "center" (optional)
- */
-function PromoCard({ image, children, className = "", overlay = "soft", align = "left" }) {
-  const overlayClass =
-    overlay === "strong"
-      ? "bg-gradient-to-r from-black/70 via-black/45 to-black/15"
-      : "bg-gradient-to-r from-black/60 via-black/30 to-black/10";
-
-  const alignClass = align === "center" ? "items-center text-center" : "items-start text-left";
-
+function PromoCard({ image, children, className = "", overlay = "soft" }) {
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ borderRadius: 0 }}>
+    <div className={`relative overflow-hidden group rounded-[3rem] shadow-premium ${className}`}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={image}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           loading="lazy"
         />
+        {/* Modern Gradient Overlays */}
+        <div className={`absolute inset-0 transition-opacity duration-700 ${
+          overlay === "strong" 
+            ? "bg-gradient-to-tr from-black/90 via-black/40 to-transparent" 
+            : "bg-gradient-to-tr from-blue-950/80 via-slate-900/40 to-transparent"
+        }`} />
       </div>
 
-      {/* Overlay */}
-      <div className={`absolute inset-0 ${overlayClass}`} />
-
       {/* Content */}
-      <div className={`relative z-10 h-full p-7 md:p-10 flex flex-col justify-center ${alignClass}`}>
+      <div className="relative z-10 h-full p-10 md:p-14 flex flex-col justify-center items-start">
         {children}
       </div>
     </div>

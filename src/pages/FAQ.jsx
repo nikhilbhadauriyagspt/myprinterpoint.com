@@ -8,12 +8,12 @@ const faqData = [
   {
     category: "Orders & Purchasing",
     questions: [
-      { q: "How do I place an order on victorprinter?", a: "Simply browse our products, add your items to the cart, and complete the checkout using your preferred payment method." },
+      { q: "How do I place an order on My Printer Point?", a: "Simply browse our products, add your items to the cart, and complete the checkout using your preferred payment method." },
       { q: "Do I need an account to purchase?", a: "No. You can checkout as a guest. However, creating an account helps you track orders and access your purchase history." },
       { q: "How can I check my order status?", a: "Log into your account and visit My Orders to view real-time updates. You will also receive email notifications." },
       { q: "Can I modify or cancel my order after placing it?", a: "Orders can be modified or canceled before shipping. Once the item is dispatched, cancellations aren’t possible." },
       { q: "What payment methods do you accept?", a: "We accept major credit/debit cards (Visa, Mastercard), PayPal, and other secure digital payment options." },
-      { q: "Is shopping on victorprinter secure?", a: "Yes. All transactions are encrypted and processed through verified, PCI-compliant payment networks including PayPal Secure." }
+      { q: "Is shopping on My Printer Point secure?", a: "Yes. All transactions are encrypted and processed through verified, PCI-compliant payment networks including PayPal Secure." }
     ]
   },
   {

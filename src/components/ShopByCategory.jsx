@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ShopByCategoryGrid({ categories = [] }) {
   // Parent: Printers (same logic)
@@ -41,17 +42,21 @@ export default function ShopByCategoryGrid({ categories = [] }) {
           Top Categories
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayCategories.slice(0, 9).map((cat, idx) => (
-            <div
+            <motion.div
               key={cat.id || cat.slug || idx}
-              className="p-6 md:p-7 lg:py-9 bg-white "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="p-6 md:p-8 bg-white rounded-[2rem] shadow-sm hover:shadow-premium transition-all duration-500 hover:-translate-y-2 group border border-slate-50"
             >
               <div className="flex items-start gap-6">
                 {/* Image */}
                 <Link
                   to={`/shop?category=${cat.slug}`}
-                  className="w-[120px] h-[86px] md:w-[140px] md:h-[95px] shrink-0 flex items-center justify-center bg-white"
+                  className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] shrink-0 flex items-center justify-center bg-slate-50 rounded-2xl overflow-hidden p-4 group-hover:bg-blue-50 transition-colors duration-500"
                   aria-label={cat.name}
                 >
                   <img
@@ -63,7 +68,7 @@ export default function ShopByCategoryGrid({ categories = [] }) {
                         )}&background=ffffff&color=111111&bold=true&size=128`
                     }
                     alt={cat.name}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
                         cat.name?.slice(0, 1) || "C"
@@ -73,31 +78,30 @@ export default function ShopByCategoryGrid({ categories = [] }) {
                 </Link>
 
                 {/* Text */}
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <Link
                     to={`/shop?category=${cat.slug}`}
-                    className="block text-[15px] md:text-[16px] font-extrabold text-black hover:text-[#3b82f6] transition-colors"
+                    className="block text-lg md:text-xl font-bold text-slate-900 hover:text-[#3b82f6] transition-colors line-clamp-1"
                   >
                     {cat.name}
                   </Link>
 
-                  <p className="mt-2 text-[13px] text-[#8d8d8d] leading-snug">
+                  <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">
                     {getCategoryDesc(cat.slug)}
                   </p>
 
-                  <div className="mt-3">
+                  <div className="mt-5">
                     <Link
                       to={`/shop?category=${cat.slug}`}
-                      className="inline-flex items-center gap-2 bg-[#ffc122] hover:bg-[#ffb300] text-black text-[12px] font-bold px-4 py-2 transition-all"
-                      style={{ borderRadius: 0, boxShadow: "none" }}
+                      className="inline-flex items-center gap-2 text-[#3b82f6] text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all"
                     >
-                      View Products
-                      <ArrowRight size={14} />
+                      Explore More
+                      <ArrowRight size={16} />
                     </Link>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

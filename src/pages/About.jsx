@@ -42,7 +42,7 @@ export default function About() {
               <div className="w-12 h-1 bg-[#ffc122]" />
             </div>
             <p className="text-gray-500 text-lg font-medium leading-relaxed">
-              Founded in 2026, Victorprinter was established to solve a singular challenge: making the acquisition of high-performance printing infrastructure simple, transparent, and absolutely authentic. As a new generation authorized partner, we bridge the gap between complex industrial technology and a seamless, personalized experience.
+              Founded in 2026, My Printer Point was established to solve a singular challenge: making the acquisition of high-performance printing infrastructure simple, transparent, and absolutely authentic. As a new generation authorized partner, we bridge the gap between complex industrial technology and a seamless, personalized experience.
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -115,7 +115,7 @@ export default function About() {
         <div className="bg-white p-10 md:p-16 border border-[#e9e9e9] rounded-sm">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-black">The Victorprinter Advantage</h2>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-black">The My Printer Point Advantage</h2>
               <p className="text-gray-400 text-sm font-semibold">Certified hardware ecosystem benefits</p>
             </div>
             <Link to="/shop" className="text-xs font-bold text-[#007DBA] hover:underline flex items-center gap-2">

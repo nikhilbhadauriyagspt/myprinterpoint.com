@@ -68,7 +68,7 @@ export default function Home() {
     <div className="bg-[#F5F5F5] font-sans overflow-x-hidden text-slate-900">
       <SEO
         title="Authorized HP Partner | Premium Printers, Genuine Ink & Toner"
-        description="Shop authorized HP printers, genuine ink, toner, and premium tech accessories at victorprinter. Your trusted partner for high-performance printing solutions in Pasadena, CA and nationwide."
+        description="Shop authorized HP printers, genuine ink, toner, and premium tech accessories at My Printer Point. Your trusted partner for high-performance printing solutions in Pasadena, CA and nationwide."
         keywords="HP Authorized Partner, Buy HP Printers Online, Genuine HP Ink and Toner, HP LaserJet, HP OfficeJet, Printer Accessories, Business Printing Solutions, Pasadena Tech Store"
       />
       {/* 1. HERO */}

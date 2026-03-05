@@ -110,7 +110,7 @@ export default function Shop() {
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen font-sans text-slate-900">
-      <SEO title="Shop Authorized Printers | victorprinter" />
+      <SEO title="Shop Authorized Printers | My Printer Point" />
 
       {/* --- Page Header --- */}
       <div className="bg-white border-b border-[#e9e9e9]">

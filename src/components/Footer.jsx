@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="lg:col-span-4 space-y-10">
               <div className="space-y-6">
                 <Link to="/" className="block">
-                  <img src="/logo/logo.png" alt="Victorprinter" className="h-10 md:h-12 object-contain" />
+                  <img src="/logo/logo.png" alt="My Printer Point" className="h-10 md:h-12 object-contain" />
                 </Link>
                 <p className="text-gray-500 font-medium leading-relaxed text-[15px]">
                   HP Authorized Partner specializing in high-performance printing ecosystems. From enterprise-grade laser systems to precision inkjet technology, we empower modern workspaces with original hardware and dedicated technical expertise.
@@ -109,7 +109,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-[11px] font-extrabold text-gray-400 uppercase tracking-widest mb-1">Corporate Office</p>
-                    <p className="text-[14px] font-bold text-gray-800">3855 E Foothill Blvd, Pasadena, CA 91107, USA</p>
+                    <p className="text-[14px] font-bold text-gray-800">3883 EFoothill Blvd, Pasadena, CA 91107, USA</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -202,9 +202,10 @@ export default function Footer() {
         <div className="w-full mx-auto px-6 lg:px-16">
           <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-[11px] font-bold uppercase tracking-widest">
-              <span>© 2026 Victorprinter . All Rights Reserved.</span>
+              <span>© 2026 MyPrinterPoint. All Rights Reserved.</span>
 
             </div>
+
 
             <div className="flex flex-wrap justify-center items-center gap-8 text-[11px] font-black tracking-widest uppercase">
               <div className="flex items-center gap-2 text-[#3b82f6]">

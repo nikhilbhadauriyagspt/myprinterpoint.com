@@ -256,7 +256,7 @@ export default function Orders() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-1">Fleet Carrier</p>
-                      <p className="text-xs font-bold text-slate-900 uppercase tracking-wider">victorprinter Logistics</p>
+                      <p className="text-xs font-bold text-slate-900 uppercase tracking-wider">My Printer Point Logistics</p>
                     </div>
                     <div className="text-right">
                       <p className="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-1">Expected Arrival</p>

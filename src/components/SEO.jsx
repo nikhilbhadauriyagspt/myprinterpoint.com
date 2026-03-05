@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export default function SEO({ title, description, keywords, schemaType = "Website" }) {
   useEffect(() => {
     // Update Title
-    const baseTitle = "Victorprinter";
+    const baseTitle = "My Printer Point";
     const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
     document.title = fullTitle;
 
@@ -44,13 +44,13 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
     const schemaData = {
       "@context": "https://schema.org",
       "@type": schemaType === "Product" ? "Product" : "Organization",
-      "name": "Victorprinter",
-      "url": "https://victorprinter.shop",
-      "logo": "https://victorprinter.shop/logo/logo.png",
+      "name": "My Printer Point",
+      "url": "https://myprinterpoint.com",
+      "logo": "https://myprinterpoint.com/logo/logo.png",
       "description": finalDesc,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3855 E Foothill Blvd",
+        "streetAddress": "3883 EFoothill Blvd",
         "addressLocality": "Pasadena",
         "addressRegion": "CA",
         "postalCode": "91107",
@@ -59,7 +59,7 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "info@victorprinter.shop"
+        "email": "info@myprinterpoint.com"
       }
     };
 
