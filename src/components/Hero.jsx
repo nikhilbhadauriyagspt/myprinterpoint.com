@@ -107,7 +107,7 @@ export default function Hero() {
                 <div className="absolute inset-0 w-full h-full">
                   <img
                     src={bgRight}
-                    alt="Ink Solutions"
+                    alt="Authorized HP Smart Ink Solutions Banner"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Overlay for text readability */}
@@ -132,7 +132,7 @@ export default function Hero() {
                 <div className="absolute inset-0 w-full h-full">
                   <img
                     src={premiumFor}
-                    alt="Enterprise Series"
+                    alt="Premium Enterprise Printer Series Banner"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Overlay for text readability */}

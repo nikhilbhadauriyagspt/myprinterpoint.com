@@ -2,14 +2,15 @@ import { useEffect } from 'react';
 
 export default function SEO({ title, description, keywords, schemaType = "Website" }) {
   useEffect(() => {
-    // Update Title
+    // Update Title - Avoid doubling the brand name if it's already in the prop
     const baseTitle = "My Printer Point";
-    const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
+    const fullTitle = title && title.includes(baseTitle) ? title : (title ? `${title} | ${baseTitle}` : baseTitle);
     document.title = fullTitle;
 
     // Update Description
     const metaDescription = document.querySelector('meta[name="description"]');
-    const finalDesc = description || "Authorized HP partner specializing in pro workstations, precision printing, and genuine Product accessories.";
+    const defaultDesc = "Authorized HP partner specializing in precision printing, genuine ink, and expert business solutions.";
+    const finalDesc = description || defaultDesc;
     if (metaDescription) {
       metaDescription.setAttribute('content', finalDesc);
     }
@@ -21,7 +22,7 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       metaKeywords.name = "keywords";
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', keywords || "HP Authorized Partner, Premium Laptops, Business Printers, Tech Support");
+    metaKeywords.setAttribute('content', keywords || "HP Authorized Partner, Business Printers, Genuine HP Ink, Printer Service");
 
     // Update Canonical
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -50,7 +51,7 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       "description": finalDesc,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3883 EFoothill Blvd",
+        "streetAddress": "3883 E Foothill Blvd",
         "addressLocality": "Pasadena",
         "addressRegion": "CA",
         "postalCode": "91107",

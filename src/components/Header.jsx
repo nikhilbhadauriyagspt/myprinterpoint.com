@@ -459,7 +459,7 @@ export default function Header() {
               <div className="p-5 border-b flex items-center justify-between bg-gray-50/50">
                 <img
                   src="/logo/logo.png"
-                  alt="Logo"
+                  alt="My Printer Point Logo"
                   className="h-8 object-contain"
                 />
                 <button
