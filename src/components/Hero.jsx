@@ -9,16 +9,22 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 
+// Import images from assets for reliable production loading
+import banner1 from "@/assets/bannerr/banner-1.jpg";
+import banner2 from "@/assets/bannerr/banner-2.jpg";
+import bgRight from "/banner/promo-top-right.jpg";
+import premiumFor from "/banner/promo-bottom-right.jpg";
+
 const mainBanners = [
   {
-    image: "src/assets/bannerr/banner-1.jpg",
+    image: banner1, // Using assets banner
     title: "Next-Gen Printing",
     subtitle: "Precision & Speed",
     description: "Discover the latest HP LaserJet series for high-performance business printing.",
     cta: "Shop Now"
   },
   {
-    image: "src/assets/bannerr/banner-2.jpg",
+    image: banner2, // Using assets banner
     title: "Genuine Supplies",
     subtitle: "Original Ink & Toner",
     description: "Keep your printer healthy and your prints sharp with original HP supplies.",
@@ -33,7 +39,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row gap-6 h-auto lg:h-[650px]">
 
           {/* LEFT SECTION - IMAGE SLIDER */}
-          <div className="lg:w-[70%] h-[400px] md:h-[500px] lg:h-full relative overflow-hidden bg-slate-100  group">
+          <div className="lg:w-[70%] h-[400px] md:h-[500px] lg:h-full relative overflow-hidden bg-slate-100 rounded-[2.5rem] shadow-premium group">
             <Swiper
               modules={[Autoplay, Pagination, EffectFade]}
               effect="fade"
@@ -95,12 +101,12 @@ export default function Hero() {
           {/* RIGHT SECTION - TWO STACKED BANNERS */}
           <div className="lg:w-[30%] flex flex-col gap-6 h-full">
             {/* Top Banner */}
-            <div className="flex-1 relative overflow-hidden group  bg-[#0f172a]">
+            <div className="flex-1 relative overflow-hidden group rounded-[2.5rem] shadow-premium bg-[#0f172a]">
               <Link to="/shop" className="block h-full w-full">
                 {/* Background Image */}
                 <div className="absolute inset-0 w-full h-full">
                   <img
-                    src="/banner/promo-top-right.jpg"
+                    src={bgRight}
                     alt="Ink Solutions"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -120,12 +126,12 @@ export default function Hero() {
             </div>
 
             {/* Bottom Banner */}
-            <div className="flex-1 relative overflow-hidden group  bg-white border border-slate-100">
+            <div className="flex-1 relative overflow-hidden group rounded-[2.5rem] shadow-premium bg-white border border-slate-100">
               <Link to="/shop" className="block h-full w-full">
                 {/* Background Image */}
                 <div className="absolute inset-0 w-full h-full">
                   <img
-                    src="/banner/promo-bottom-right.jpg"
+                    src={premiumFor}
                     alt="Enterprise Series"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
