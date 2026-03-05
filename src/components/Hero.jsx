@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row gap-6 h-auto lg:h-[650px]">
 
           {/* LEFT SECTION - IMAGE SLIDER */}
-          <div className="lg:w-[70%] h-[400px] md:h-[500px] lg:h-full relative overflow-hidden bg-slate-100 rounded-[2.5rem] shadow-premium group">
+          <div className="lg:w-[70%] h-[400px] md:h-[500px] lg:h-full relative overflow-hidden bg-slate-100  group">
             <Swiper
               modules={[Autoplay, Pagination, EffectFade]}
               effect="fade"
@@ -101,7 +101,7 @@ export default function Hero() {
           {/* RIGHT SECTION - TWO STACKED BANNERS */}
           <div className="lg:w-[30%] flex flex-col gap-6 h-full">
             {/* Top Banner */}
-            <div className="flex-1 relative overflow-hidden group rounded-[2.5rem] shadow-premium bg-[#0f172a]">
+            <div className="flex-1 relative overflow-hidden group  bg-[#0f172a]">
               <Link to="/shop" className="block h-full w-full">
                 {/* Background Image */}
                 <div className="absolute inset-0 w-full h-full">
@@ -126,7 +126,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom Banner */}
-            <div className="flex-1 relative overflow-hidden group rounded-[2.5rem] shadow-premium bg-white border border-slate-100">
+            <div className="flex-1 relative overflow-hidden group  bg-white border border-slate-100">
               <Link to="/shop" className="block h-full w-full">
                 {/* Background Image */}
                 <div className="absolute inset-0 w-full h-full">
